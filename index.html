@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arun's Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Arun's Coffee Logo" class="logo" />
+    <h1> Welcome to Arun's Coffee ☕</h1>
+  </header>
+
+  <div class="tabs">
+    <button onclick="showTab('login')">Login</button>
+    <button onclick="showTab('register')">Register</button>
+    <button onclick="showTab('order')">Order Coffee</button>
+  </div>
+
+  <!-- Login Form -->
+  <form id="loginForm" class="form-tab">
+    <h3>Login</h3>
+    <input type="text" id="loginUsername" placeholder="Username" required />
+    <input type="password" id="loginPassword" placeholder="Password" required />
+    <button type="submit" class="btn">Login</button>
+  </form>
+
+  <!-- Register Form -->
+  <form id="registerForm" class="form-tab">
+    <h3>Register</h3>
+    <input type="text" id="registerUsername" placeholder="Username" required />
+    <input type="password" id="registerPassword" placeholder="Password" required />
+    <button type="submit" class="btn">Register</button>
+  </form>
+
+  <!-- Order Form -->
+  <form id="coffeeForm" class="form-tab" style="display: none;">
+    <h3> Order Coffee</h3>
+    <input type="text" id="name" placeholder="Your Name" required />
+    <select id="coffeeType">
+      <option value="Cappuccino">Cappuccino</option>
+      <option value="Espresso">Espresso</option>
+      <option value="Latte">Latte</option>
+      <option value="Mocha">Mocha</option>
+    </select>
+
+    <select id="payment">
+      <option value="GPay">GPay</option>
+      <option value="PhonePe">PhonePe</option>
+      <option value="Cash on Delivery">Cash on Delivery</option>
+    </select>
+
+    <div class="payment-icons">
+      <img src="images/gpay.png" alt="GPay" />
+      <img src="images/phonepe.png" alt="PhonePe" />
+    </div>
+
+    <button type="submit" class="btn">Place Order</button>
+    <div id="message"></div>
+  </form>
+
+  <!-- Coffee Animation -->
+  <div class="coffee-animation">
+    <div class="coffee-cup"></div>
+    <div class="coffee-beans"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
