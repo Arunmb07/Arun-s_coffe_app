@@ -1,15 +1,22 @@
 let currentUser = null;
 
 function showTab(tab) {
+  // Hide all forms first
   document.getElementById("loginForm").style.display = "none";
   document.getElementById("registerForm").style.display = "none";
   document.getElementById("coffeeForm").style.display = "none";
 
-  if (tab === "login") document.getElementById("loginForm").style.display = "block";
-  else if (tab === "register") document.getElementById("registerForm").style.display = "block";
-  else if (tab === "order") {
-    if (currentUser) document.getElementById("coffeeForm").style.display = "block";
-    else alert("Please login to place an order.");
+  // Show the specific tab based on the argument passed
+  if (tab === "login") {
+    document.getElementById("loginForm").style.display = "block";
+  } else if (tab === "register") {
+    document.getElementById("registerForm").style.display = "block";
+  } else if (tab === "order") {
+    if (currentUser) {
+      document.getElementById("coffeeForm").style.display = "block";
+    } else {
+      alert("Please login to place an order.");
+    }
   }
 }
 
